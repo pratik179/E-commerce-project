@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
 
-  currentSection: any
+  currentSection!: string
   isNavbarContentOpen: any
 
   navigateToCart(cart: string) {
@@ -29,15 +29,23 @@ export class NavbarComponent {
     const modalContainer = document.querySelector('.modal-container');
     const openButtons = document.querySelectorAll('open-button');
 
-    let clickInsideButton = false;
+    let clickedInsideButton = false;
 
     openButtons.forEach((button: Element) => {
       if (button.contains(event.target as Node)) {
-        clickInsideButton = true;
+        clickedInsideButton = true;
       }
     })
 
-    if (modalContainer && !clickInsideButton && this.isNavbarContentOpen) {
+    // if (modalContainer && !clickedInsideButton && this.isNavbarContentOpen) {
+    //   this.closeNavbarContent();
+    // }
+
+    if (modalContainer && !clickedInsideButton && this.isNavbarContentOpen) {
+      console.log(
+        'container ---------------------- ',
+        this.isNavbarContentOpen
+      );
       this.closeNavbarContent();
     }
   }
