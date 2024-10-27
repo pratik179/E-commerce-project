@@ -1,0 +1,27 @@
+<div class="h-[90vh]">
+
+    <main class="max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
+
+        <div class="flex items-baseline justify-between border-gray-200 pb-6 pt-24">
+
+            <h1 class="text-4xl font-bold text-white">Products</h1>
+
+            <div class="flex items-center">
+
+                <div>
+                    <button mat-button [matMenuTriggerFor]="sort">
+
+                        <mat-menu #sort="matMenu">
+                            <button mat-menu-item>Item 1</button>
+                            <button mat-menu-item>Item 2</button>
+                        </mat-menu>
+
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+</div>
