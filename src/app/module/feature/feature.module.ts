@@ -14,6 +14,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import { SharedModule } from '../shared/shared.module';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
@@ -21,6 +22,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
 import { OrderComponent } from './components/order/order.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { ProductReviewCardComponent } from './components/product-detail/product-review-card/product-review-card.component';
 
 
 
@@ -38,7 +40,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     PaymentComponent,
     PaymentSuccessComponent,
     OrderComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    ProductReviewCardComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +52,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     MatCheckboxModule,
     FormsModule,
     MatRadioModule,
-    SharedModule
+    SharedModule,
+    MatProgressBarModule
   ],
   exports:[
     FeatureComponent,
